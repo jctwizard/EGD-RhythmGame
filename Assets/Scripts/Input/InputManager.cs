@@ -7,7 +7,9 @@ public class InputManager : MonoBehaviour {
 	private PromptManager m_promptManagerRef;
 	private GameObject m_gameData;
 	private GameData m_gameDataRef;
-
+	private GameObject playerRef;
+	// TO DO, hand in damage from the object that does damage. -GC
+	private int damage = 10;
 	// Use this for initialization
 	void Start () {
 		m_promptManager = GameObject.Find("PromptManager");
@@ -15,6 +17,8 @@ public class InputManager : MonoBehaviour {
 
 		m_gameData = GameObject.Find ("GameData");
 		m_gameDataRef = m_gameData.GetComponent<GameData>();
+
+		playerRef = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 	// Update is called once per frame
@@ -79,12 +83,28 @@ public class InputManager : MonoBehaviour {
 	{
 		int newScore = m_gameDataRef.score + 100;
 		m_gameDataRef.SetScore(newScore);
+
+		//If an enemey is near, do kill it
+		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
+		if (enemy) {
+			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
+				Destroy (enemy);
+			}
+		}
 	}
 
 	void WrongInput()
 	{
 		int newScore = m_gameDataRef.score - 100;
-		m_gameDataRef.SetScore(newScore);
+		m_gameDataRef.SetScore (newScore);
+
+		//If an enemey is near, do damage
+		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
+		if (enemy) {
+			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
+				playerRef.GetComponent<PlayerStats> ().TakeDamage (enemy.GetComponent<EnemyScript> ().Damage);
+			}
+		}
 	}
 
 

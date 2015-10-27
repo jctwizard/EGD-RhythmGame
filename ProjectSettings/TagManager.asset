@@ -9,6 +9,7 @@ TagManager:
   - Down
   - Left
   - Right
+  - Enemy
   layers:
   - Default
   - TransparentFX
