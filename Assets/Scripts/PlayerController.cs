@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-	enum State { Attack, Defence, Idle, Run };
+	enum State { Attack, Defence, Idle, Run, Slash, Roll };
 	Animator animator;
 
 	// Use this for initialization
@@ -18,20 +18,27 @@ public class PlayerController : MonoBehaviour
 		// Debug change animaton
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
-			Debug.Log ("pressed 1");
 			animator.SetInteger("State", (int)State.Attack);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-			animator.SetInteger("State" , (int)State.Defence);
+			animator.SetInteger("State", (int)State.Defence);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
-			animator.SetInteger("State" , (int)State.Idle);
+			animator.SetInteger("State", (int)State.Idle);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha4))
 		{
-			animator.SetInteger("State" , (int)State.Run);
+			animator.SetInteger("State", (int)State.Run);
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha5))
+		{
+			animator.SetInteger("State", (int)State.Slash);
+		}
+		else if (Input.GetKeyDown(KeyCode.Alpha6))
+		{
+			animator.SetInteger("State", (int)State.Roll);
 		}
 	}
 }

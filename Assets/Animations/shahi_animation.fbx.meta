@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 74aad4810d03642609e2c969b8dcb5ef
-timeCreated: 1445781911
+guid: 86a735ee0ec3b46a1ba281ee95c64f06
+timeCreated: 1446486451
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -45,10 +45,13 @@ ModelImporter:
     400036: shahi_body
     4300000: shahi_body
     7400000: Default Take
-    7400002: Defence
-    7400004: Running_seamless
-    7400006: Steady
-    7400008: Attack
+    7400002: Attack__wrong_
+    7400004: Defence
+    7400006: Fall_to_roll
+    7400008: Jump_attack
+    7400010: Running_seamless
+    7400012: Running_slash
+    7400014: Steady
     9500000: //RootNode
     13700000: shahi_body
   materials:
@@ -72,8 +75,264 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_arm_r
+        weight: 1
+      - path: Armature/ik_forearm_l
+        weight: 1
+      - path: Armature/ik_forearm_r
+        weight: 1
+      - path: Armature/ik_leg_l
+        weight: 1
+      - path: Armature/ik_leg_r
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg_l
+        weight: 1
+      - path: Armature/root/leg_l/foreleg_l
+        weight: 1
+      - path: Armature/root/leg_r
+        weight: 1
+      - path: Armature/root/leg_r/foreleg_r
+        weight: 1
+      - path: Armature/root/root_002
+        weight: 1
+      - path: Armature/root/root_002/arm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_l/forearm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_r
+        weight: 1
+      - path: Armature/root/root_002/arm_r/forearm_r
+        weight: 1
+      - path: Armature/root/root_002/root_001
+        weight: 1
+      - path: shahi_body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack__wrong_
+      takeName: Attack__wrong_
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_arm_r
+        weight: 1
+      - path: Armature/ik_forearm_l
+        weight: 1
+      - path: Armature/ik_forearm_r
+        weight: 1
+      - path: Armature/ik_leg_l
+        weight: 1
+      - path: Armature/ik_leg_r
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg_l
+        weight: 1
+      - path: Armature/root/leg_l/foreleg_l
+        weight: 1
+      - path: Armature/root/leg_r
+        weight: 1
+      - path: Armature/root/leg_r/foreleg_r
+        weight: 1
+      - path: Armature/root/root_002
+        weight: 1
+      - path: Armature/root/root_002/arm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_l/forearm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_r
+        weight: 1
+      - path: Armature/root/root_002/arm_r/forearm_r
+        weight: 1
+      - path: Armature/root/root_002/root_001
+        weight: 1
+      - path: shahi_body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
       name: Defence
       takeName: Defence
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_arm_r
+        weight: 1
+      - path: Armature/ik_forearm_l
+        weight: 1
+      - path: Armature/ik_forearm_r
+        weight: 1
+      - path: Armature/ik_leg_l
+        weight: 1
+      - path: Armature/ik_leg_r
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg_l
+        weight: 1
+      - path: Armature/root/leg_l/foreleg_l
+        weight: 1
+      - path: Armature/root/leg_r
+        weight: 1
+      - path: Armature/root/leg_r/foreleg_r
+        weight: 1
+      - path: Armature/root/root_002
+        weight: 1
+      - path: Armature/root/root_002/arm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_l/forearm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_r
+        weight: 1
+      - path: Armature/root/root_002/arm_r/forearm_r
+        weight: 1
+      - path: Armature/root/root_002/root_001
+        weight: 1
+      - path: shahi_body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fall_to_roll
+      takeName: Fall_to_roll
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_arm_r
+        weight: 1
+      - path: Armature/ik_forearm_l
+        weight: 1
+      - path: Armature/ik_forearm_r
+        weight: 1
+      - path: Armature/ik_leg_l
+        weight: 1
+      - path: Armature/ik_leg_r
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg_l
+        weight: 1
+      - path: Armature/root/leg_l/foreleg_l
+        weight: 1
+      - path: Armature/root/leg_r
+        weight: 1
+      - path: Armature/root/leg_r/foreleg_r
+        weight: 1
+      - path: Armature/root/root_002
+        weight: 1
+      - path: Armature/root/root_002/arm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_l/forearm_l
+        weight: 1
+      - path: Armature/root/root_002/arm_r
+        weight: 1
+      - path: Armature/root/root_002/arm_r/forearm_r
+        weight: 1
+      - path: Armature/root/root_002/root_001
+        weight: 1
+      - path: shahi_body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump_attack
+      takeName: Jump_attack
       firstFrame: -1
       lastFrame: 34
       wrapMode: 0
@@ -200,8 +459,8 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Steady
-      takeName: Steady
+      name: Running_slash
+      takeName: Running_slash
       firstFrame: -1
       lastFrame: 34
       wrapMode: 0
@@ -209,8 +468,8 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -264,17 +523,17 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack
-      takeName: Attack
+      name: Steady
+      takeName: Steady
       firstFrame: -1
-      lastFrame: 29
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
