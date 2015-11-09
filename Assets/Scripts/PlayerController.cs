@@ -4,13 +4,13 @@ using System.Collections;
 public class PlayerController : MonoBehaviour 
 {
 	public enum State { Attack, Defence, Idle, Run, Slash, Roll };
-	Animator animator;
-	float stateNeedsReset = 0;
+	private Animator animatorRef;
+	private float stateNeedsReset = 0;
 
 	// Use this for initialization
 	void Start () 
 	{
-		animator = GetComponent<Animator>();
+		animatorRef = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 		// Reset the state after a delay
 		if (stateNeedsReset == 0)
 		{
-			animator.SetInteger("State", (int)State.Run);
+			animatorRef.SetInteger("State", (int)State.Run);
 		}
 		else
 		{
@@ -29,33 +29,33 @@ public class PlayerController : MonoBehaviour
 		// Debug change animaton
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
-			animator.SetInteger("State", (int)State.Attack);
+			animatorRef.SetInteger("State", (int)State.Attack);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-			animator.SetInteger("State", (int)State.Defence);
+			animatorRef.SetInteger("State", (int)State.Defence);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
-			animator.SetInteger("State", (int)State.Idle);
+			animatorRef.SetInteger("State", (int)State.Idle);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha4))
 		{
-			animator.SetInteger("State", (int)State.Run);
+			animatorRef.SetInteger("State", (int)State.Run);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha5))
 		{
-			animator.SetInteger("State", (int)State.Slash);
+			animatorRef.SetInteger("State", (int)State.Slash);
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha6))
 		{
-			animator.SetInteger("State", (int)State.Roll);
+			animatorRef.SetInteger("State", (int)State.Roll);
 		}
 	}
 
 	public void ChangeState(State state)
 	{
-		animator.SetInteger("State", (int)state);
-		stateNeedsReset = 1;
+		animatorRef.SetInteger("State", (int)state);
+		stateNeedsReset = 1.0f;
 	}
 }

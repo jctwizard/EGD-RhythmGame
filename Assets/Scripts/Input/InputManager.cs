@@ -9,8 +9,10 @@ public class InputManager : MonoBehaviour {
 	private GameData m_gameDataRef;
 	private GameObject playerRef;
 	private PlayerController playerControllerRef;
+
 	// TO DO, hand in damage from the object that does damage. -GC
 	private int damage = 10;
+
 	// Use this for initialization
 	void Start () {
 		m_promptManager = GameObject.Find("PromptManager");
@@ -77,8 +79,6 @@ public class InputManager : MonoBehaviour {
 				WrongInput();
 			}
 		}
-
-
 	}
 
 	void CorrectInput()
@@ -107,13 +107,12 @@ public class InputManager : MonoBehaviour {
 		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		if (enemy) {
 			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
-				playerRef.GetComponent<PlayerStats> ().TakeDamage (enemy.GetComponent<EnemyScript> ().Damage);
-				
+				EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+				PlayerStats playerStats = playerRef.GetComponent<PlayerStats> ();
+				playerStats.TakeDamage (enemyScript.Damage);
 				// Change player animation to attack
 				playerControllerRef.ChangeState(PlayerController.State.Defence);
 			}
 		}
 	}
-
-
 }
