@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour {
 	private GameObject m_gameData;
 	private GameData m_gameDataRef;
 	private GameObject playerRef;
+	private PlayerController playerControllerRef;
 	// TO DO, hand in damage from the object that does damage. -GC
 	private int damage = 10;
 	// Use this for initialization
@@ -19,6 +20,7 @@ public class InputManager : MonoBehaviour {
 		m_gameDataRef = m_gameData.GetComponent<GameData>();
 
 		playerRef = GameObject.FindGameObjectWithTag ("Player");
+		playerControllerRef = playerRef.GetComponent<PlayerController>();
 	}
 	
 	// Update is called once per frame
@@ -89,6 +91,9 @@ public class InputManager : MonoBehaviour {
 		if (enemy) {
 			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
 				Destroy (enemy);
+
+				// Change player animation to attack
+				playerControllerRef.ChangeState(PlayerController.State.Attack);
 			}
 		}
 	}
@@ -103,6 +108,9 @@ public class InputManager : MonoBehaviour {
 		if (enemy) {
 			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
 				playerRef.GetComponent<PlayerStats> ().TakeDamage (enemy.GetComponent<EnemyScript> ().Damage);
+				
+				// Change player animation to attack
+				playerControllerRef.ChangeState(PlayerController.State.Defence);
 			}
 		}
 	}

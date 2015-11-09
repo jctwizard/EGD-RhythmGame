@@ -3,8 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-	enum State { Attack, Defence, Idle, Run, Slash, Roll };
+	public enum State { Attack, Defence, Idle, Run, Slash, Roll };
 	Animator animator;
+	float stateNeedsReset = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -15,6 +16,16 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		// Reset the state after a delay
+		if (stateNeedsReset == 0)
+		{
+			animator.SetInteger("State", (int)State.Run);
+		}
+		else
+		{
+			stateNeedsReset = Mathf.Max(0, stateNeedsReset - Time.deltaTime);
+		}
+
 		// Debug change animaton
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
@@ -40,5 +51,11 @@ public class PlayerController : MonoBehaviour
 		{
 			animator.SetInteger("State", (int)State.Roll);
 		}
+	}
+
+	public void ChangeState(State state)
+	{
+		animator.SetInteger("State", (int)state);
+		stateNeedsReset = 1;
 	}
 }
