@@ -10,7 +10,9 @@ public class EnemyScript : MonoBehaviour {
 	public enum State { Attack, Flinch, Death, Idle };
 	private Animator animatorRef;
 	private float stateNeedsReset = 0;
-	private float respawnTimer = 0;
+	private bool dead = false;
+	private const float offScreen = -20.0f;
+	public float speed = 1.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -30,27 +32,25 @@ public class EnemyScript : MonoBehaviour {
 			stateNeedsReset = Mathf.Max(0, stateNeedsReset - Time.deltaTime);
 		}
 
-		if (respawnTimer > 0)
-		{ 
-			respawnTimer -= Time.deltaTime;
-
-			if (respawnTimer <= 0)
-			{
-				respawnTimer = 0;
-				//Destroy (enemy);
-				transform.position = new Vector3(10 + Random.Range(0, 5), transform.position.y, transform.position.z);
-			}
+		if (transform.position.x < offScreen)
+		{
+			Destroy(gameObject);
 		}
 
-		if (Vector3.Distance (player.transform.position, gameObject.transform.position) > range) {
-
-			transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, 1*Time.deltaTime);
-		}
+		//if (Vector3.Distance (player.transform.position, gameObject.transform.position) > range || dead) 
+		//{
+			transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position + new Vector3(offScreen, 0, 0), speed*Time.deltaTime);
+		//}
 	}
 
-	public void Respawn()
+	public void Kill()
 	{
-		respawnTimer = 3.0f;
+		dead = true;
+	}
+
+	public bool Dead()
+	{
+		return dead;
 	}
 	
 	public void ChangeState(State state)

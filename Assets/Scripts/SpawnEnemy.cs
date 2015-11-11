@@ -16,8 +16,11 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		if (enemy == null) {
-			enemy = (GameObject)Instantiate(enemyPrefab,gameObject.transform.position, Quaternion.identity);
+			enemy = (GameObject)Instantiate(enemyPrefab);
+			enemy.transform.position = gameObject.transform.position;
+			enemy.transform.eulerAngles = new Vector3(0, 180, 0);
 		}
 	}
 }

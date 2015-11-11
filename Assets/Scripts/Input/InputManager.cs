@@ -89,13 +89,14 @@ public class InputManager : MonoBehaviour {
 		//If an enemey is near, do kill it
 		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		if (enemy) {
-			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
-				EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+			EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+
+			if (!enemyScript.Dead() && Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
 				enemyScript.ChangeState(EnemyScript.State.Death);
-				enemyScript.Respawn();
+				enemyScript.Kill();
 
 				// Change player animation to attack
-				playerControllerRef.ChangeState(PlayerController.State.Attack);
+				playerControllerRef.ChangeState(PlayerController.State.Slash);
 			}
 		}
 	}
@@ -108,8 +109,9 @@ public class InputManager : MonoBehaviour {
 		//If an enemey is near, do damage
 		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		if (enemy) {
-			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
-				EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+			EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+
+			if (!enemyScript.Dead() && Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
 				enemyScript.ChangeState(EnemyScript.State.Attack);
 				PlayerStats playerStats = playerRef.GetComponent<PlayerStats> ();
 				playerStats.TakeDamage (enemyScript.Damage);
