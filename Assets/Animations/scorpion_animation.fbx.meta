@@ -1,0 +1,726 @@
+fileFormatVersion: 2
+guid: 02e3a817c52714a8fb1fc725ad8e3945
+timeCreated: 1447252261
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ik_leg1
+    100004: ik_leg1_2
+    100006: ik_leg2
+    100008: ik_leg2_2
+    100010: ik_leg3
+    100012: ik_leg3_2
+    100014: ik_pincher_l
+    100016: ik_pincher_r
+    100018: ik_tail
+    100020: leg1
+    100022: leg1_2
+    100024: leg1_3
+    100026: leg2
+    100028: leg2_2
+    100030: leg2_3
+    100032: leg3
+    100034: leg3_2
+    100036: leg3_3
+    100038: pincher1_l
+    100040: pincher1_r
+    100042: pincher2_l
+    100044: pincher2_r
+    100046: pincher_l
+    100048: pincher_r
+    100050: root
+    100052: //RootNode
+    100054: scorpion_body_004
+    100056: sting
+    100058: tail1
+    100060: tail2
+    100062: tail3
+    100064: tail4
+    100066: tail5
+    100068: tail6
+    400000: Armature
+    400002: ik_leg1
+    400004: ik_leg1_2
+    400006: ik_leg2
+    400008: ik_leg2_2
+    400010: ik_leg3
+    400012: ik_leg3_2
+    400014: ik_pincher_l
+    400016: ik_pincher_r
+    400018: ik_tail
+    400020: leg1
+    400022: leg1_2
+    400024: leg1_3
+    400026: leg2
+    400028: leg2_2
+    400030: leg2_3
+    400032: leg3
+    400034: leg3_2
+    400036: leg3_3
+    400038: pincher1_l
+    400040: pincher1_r
+    400042: pincher2_l
+    400044: pincher2_r
+    400046: pincher_l
+    400048: pincher_r
+    400050: root
+    400052: //RootNode
+    400054: scorpion_body_004
+    400056: sting
+    400058: tail1
+    400060: tail2
+    400062: tail3
+    400064: tail4
+    400066: tail5
+    400068: tail6
+    4300000: scorpion_body_004
+    7400000: Default Take
+    7400002: scorpion_claw_attack
+    7400004: scorpion_flinch
+    7400006: scorpion_death
+    7400008: scorpion_still
+    7400010: scorpion_sting_king
+    9500000: //RootNode
+    13700000: scorpion_body_004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: scorpion_claw_attack
+      takeName: scorpion_claw_attack
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: scorpion_flinch
+      takeName: scorpion_flinch
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: scorpion_death
+      takeName: scorpion_death
+      firstFrame: -1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: scorpion_still
+      takeName: scorpion_still
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: scorpion_sting_king
+      takeName: scorpion_sting_king
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ik_leg1
+        weight: 1
+      - path: Armature/ik_leg1_2
+        weight: 1
+      - path: Armature/ik_leg2
+        weight: 1
+      - path: Armature/ik_leg2_2
+        weight: 1
+      - path: Armature/ik_leg3
+        weight: 1
+      - path: Armature/ik_leg3_2
+        weight: 1
+      - path: Armature/ik_pincher_l
+        weight: 1
+      - path: Armature/ik_pincher_r
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/leg1
+        weight: 1
+      - path: Armature/root/leg1/leg1_2
+        weight: 1
+      - path: Armature/root/leg1/leg1_2/leg1_3
+        weight: 1
+      - path: Armature/root/leg2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2
+        weight: 1
+      - path: Armature/root/leg2/leg2_2/leg2_3
+        weight: 1
+      - path: Armature/root/leg3
+        weight: 1
+      - path: Armature/root/leg3/leg3_2
+        weight: 1
+      - path: Armature/root/leg3/leg3_2/leg3_3
+        weight: 1
+      - path: Armature/root/pincher_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l
+        weight: 1
+      - path: Armature/root/pincher_l/pincher1_l/pincher2_l
+        weight: 1
+      - path: Armature/root/pincher_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r
+        weight: 1
+      - path: Armature/root/pincher_r/pincher1_r/pincher2_r
+        weight: 1
+      - path: Armature/root/tail1
+        weight: 1
+      - path: Armature/root/tail1/tail2
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/root/tail1/tail2/tail3/tail4/tail5/tail6/sting
+        weight: 1
+      - path: scorpion_body_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

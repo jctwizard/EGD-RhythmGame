@@ -90,7 +90,9 @@ public class InputManager : MonoBehaviour {
 		GameObject enemy = GameObject.FindGameObjectWithTag ("Enemy");
 		if (enemy) {
 			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
-				Destroy (enemy);
+				EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+				enemyScript.ChangeState(EnemyScript.State.Death);
+				enemyScript.Respawn();
 
 				// Change player animation to attack
 				playerControllerRef.ChangeState(PlayerController.State.Attack);
@@ -108,6 +110,7 @@ public class InputManager : MonoBehaviour {
 		if (enemy) {
 			if (Vector3.Distance (playerRef.transform.position, enemy.transform.position) <= enemy.GetComponent<EnemyScript> ().Range) {
 				EnemyScript enemyScript = enemy.GetComponent<EnemyScript> ();
+				enemyScript.ChangeState(EnemyScript.State.Attack);
 				PlayerStats playerStats = playerRef.GetComponent<PlayerStats> ();
 				playerStats.TakeDamage (enemyScript.Damage);
 				// Change player animation to attack
