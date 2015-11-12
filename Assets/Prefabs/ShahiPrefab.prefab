@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 197948}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: -6, y: -2.0999999, z: -1}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: .100000001}
   m_Children:
   - {fileID: 470942}
   - {fileID: 492624}
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  healValue: 1
 --- !u!114 &11497436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -629,7 +630,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: .100000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197948}

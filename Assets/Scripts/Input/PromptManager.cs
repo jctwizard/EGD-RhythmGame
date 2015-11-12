@@ -16,7 +16,7 @@ public class PromptManager : MonoBehaviour {
 
 	private const int PROMPTLIMIT = 16;				// The maximum number of prompts that exist at any time
 	public int m_promptCount = 0;					// The current number of prompts
-	public Prompt.PROMPT_TYPE currentPromptType;	// The current prompt being asked for
+	public Prompt currentPrompt;					// The current prompt being asked for
 
 	private Vector3 m_spawnPos;						// The spawning position for prompts
 	
@@ -77,13 +77,13 @@ public class PromptManager : MonoBehaviour {
 	{
 		//Debug.Log ("Spawning Prompt Type: " + promptType);
 		GameObject newPrompt;
-		newPrompt = (GameObject)Instantiate (m_gameDataRef.promptPrefabs[promptType], m_spawnPos, Quaternion.identity);
+		newPrompt = (GameObject)Instantiate (m_gameDataRef.promptPrefabs[promptType], m_spawnPos, Quaternion.Euler(0, 0, (int)promptType * 90));
 		newPrompt.transform.SetParent (m_rectTransform);
 		Prompts.Add(newPrompt);
 	}
 
-	public void SetCurrentPrompt(Prompt.PROMPT_TYPE currPrompt)
+	public void SetCurrentPrompt(Prompt currPrompt)
 	{
-		currentPromptType = currPrompt;
+		currentPrompt = currPrompt;
 	}
 }

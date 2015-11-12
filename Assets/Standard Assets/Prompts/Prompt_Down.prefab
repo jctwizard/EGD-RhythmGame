@@ -31,6 +31,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPromptType: 2
   speed: 10
+  spriteCorrect: {fileID: 21300000, guid: cff235310b80bf44cb2320c41078c5ec, type: 3}
+  spriteWrong: {fileID: 21300000, guid: 2263abde0c2af7740b6eb11fff3076e7, type: 3}
+  spriteMiss: {fileID: 21300000, guid: fe6feb486abc1954a8205e9a186e060b, type: 3}
 --- !u!114 &11483966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,7 +53,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7906157f8c59a4eb0835c5dce33cd677, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe6feb486abc1954a8205e9a186e060b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -96,6 +99,26 @@ Prefab:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spriteCorrect
+      value: 
+      objectReference: {fileID: 21300000, guid: cff235310b80bf44cb2320c41078c5ec,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: spriteWrong
+      value: 
+      objectReference: {fileID: 21300000, guid: 2263abde0c2af7740b6eb11fff3076e7,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: spriteMiss
+      value: 
+      objectReference: {fileID: 21300000, guid: fe6feb486abc1954a8205e9a186e060b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe6feb486abc1954a8205e9a186e060b,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100452}

@@ -1,64 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyScript : MonoBehaviour {
-
+public class EnemyScript : MonoBehaviour 
+{
 	[SerializeField] private int range;
 	[SerializeField] private int damage;
-	private GameObject player;
-
-	public enum State { Attack, Flinch, Death, Idle };
-	private Animator animatorRef;
-	private float stateNeedsReset = 0;
-	private bool dead = false;
+	
 	private const float offScreen = -20.0f;
 	public float speed = 1.1f;
+	public bool hit = false;
 
-	// Use this for initialization
-	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");
-		animatorRef = GetComponent<Animator>();
+	public enum State { Attack, Flinch, Death, Idle };
+	private Animator animator;
+
+	void Start() 
+	{
+		animator = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		// Reset the state after a delay
-		if (stateNeedsReset == 0)
+
+	void Update() 
+	{
+		if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
 		{
-			animatorRef.SetInteger("State", (int)State.Idle);
-		}
-		else
-		{
-			stateNeedsReset = Mathf.Max(0, stateNeedsReset - Time.deltaTime);
+			ChangeState(State.Idle);
 		}
 
-		if (transform.position.x < offScreen)
+		if (transform.position.x <= offScreen)
 		{
 			Destroy(gameObject);
 		}
+		
+		transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(offScreen, gameObject.transform.position.y, gameObject.transform.position.z), speed * Time.deltaTime);
 
-		//if (Vector3.Distance (player.transform.position, gameObject.transform.position) > range || dead) 
-		//{
-			transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position + new Vector3(offScreen, 0, 0), speed*Time.deltaTime);
-		//}
-	}
-
-	public void Kill()
-	{
-		dead = true;
-	}
-
-	public bool Dead()
-	{
-		return dead;
 	}
 	
 	public void ChangeState(State state)
 	{
-		animatorRef.SetInteger("State", (int)state);
-		stateNeedsReset = 1.0f;
+		animator.SetInteger("State", (int)state);
 	}
-	
+
 	#region Properties
 	//read only
 	public int Range

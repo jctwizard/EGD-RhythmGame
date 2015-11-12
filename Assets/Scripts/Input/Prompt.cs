@@ -6,12 +6,15 @@ public class Prompt : MonoBehaviour {
 
 	public enum PROMPT_TYPE				// Defines the different types of prompt
 	{
-		Rest, Up, Down, Left, Right
+		Rest, Up, Left, Down, Right
 	}
 	public PROMPT_TYPE myPromptType;		// This Prompt's type
 	public float speed = 15.0f;				// Speed
 	private RectTransform m_rectTransform;	// This prompt's rect transform component
 	private Image m_image;					// This prompt's image
+	public Sprite spriteCorrect;			
+	public Sprite spriteWrong;				
+	public Sprite spriteMiss;				
 	private Vector3 m_position;				// This prompt's position
 	private PromptManager m_promptmanager;	// Prompt Manager Reference
 
@@ -25,12 +28,16 @@ public class Prompt : MonoBehaviour {
 	void Update()
 	{
 		if ((m_position.x < -250) && (m_position.x > -350)) {
-			m_promptmanager.SetCurrentPrompt(myPromptType);
+			m_promptmanager.SetCurrentPrompt(this);
 			if (myPromptType != PROMPT_TYPE.Rest) {
-				ChangeColour ();
+				//ChangeColour ();
+				if (m_image.sprite != spriteCorrect && m_image.sprite != spriteWrong)
+				{
+					//m_image.sprite = spriteMiss;
+				}
 			}
 		} else if (m_image.color != Color.white) {
-			m_image.color = Color.white;
+			//m_image.color = Color.white;
 		}
 	}
 
@@ -43,6 +50,22 @@ public class Prompt : MonoBehaviour {
 	{
 		m_position.x -= speed;
 		m_rectTransform.localPosition = m_position;
+	}
+
+	public void Correct()
+	{
+		if (m_image.sprite != spriteWrong)
+		{
+			m_image.sprite = spriteCorrect;
+		}
+	}
+
+	public void Wrong()
+	{
+		if (m_image.sprite != spriteWrong)
+		{
+			m_image.sprite = spriteWrong;
+		}
 	}
 
 	public void ChangeColour()

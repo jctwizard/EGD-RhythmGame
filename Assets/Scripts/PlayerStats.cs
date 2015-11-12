@@ -5,6 +5,7 @@ public class PlayerStats : MonoBehaviour {
 
 	[SerializeField] private int health = 0;
 	[SerializeField] private int maxHealth = 100;
+	[SerializeField] private int healValue = 1;
 	// Use this for initialization
 	void Start () {
 		health = maxHealth;
@@ -20,6 +21,16 @@ public class PlayerStats : MonoBehaviour {
 		health -= damage;
 		if (health <= 0) {
 			//END GAME;
+		}
+	}
+	
+	public void Heal()
+	{
+		health += healValue;
+
+		if (health > maxHealth) 
+		{
+			health = maxHealth;
 		}
 	}
 
