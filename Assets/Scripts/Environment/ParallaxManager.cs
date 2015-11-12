@@ -4,7 +4,7 @@ using System.Collections;
 public class ParallaxManager : MonoBehaviour {
 
 	public ScrollingObject[] parallaxObjects;
-	private float m_startPosX = 19.2f;
+	private float m_startPosX = 19.15f;
 
 	// Use this for initialization
 	void Start () {

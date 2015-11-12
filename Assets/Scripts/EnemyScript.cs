@@ -12,10 +12,12 @@ public class EnemyScript : MonoBehaviour
 
 	public enum State { Attack, Flinch, Death, Idle };
 	private Animator animator;
+	private GameObject player;
 
 	void Start() 
 	{
 		animator = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update() 
@@ -29,9 +31,19 @@ public class EnemyScript : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		else if (transform.position.x < player.transform.position.x)
+		{
+			gameObject.tag = "Untagged";
+			
+			if (!hit)
+			{
+				hit = true;
+				player.GetComponent<PlayerStats>().TakeDamage(damage);
+				player.GetComponent<PlayerController>().ChangeState(PlayerController.State.Defence);
+			}
+		}
 		
 		transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(offScreen, gameObject.transform.position.y, gameObject.transform.position.z), speed * Time.deltaTime);
-
 	}
 	
 	public void ChangeState(State state)
