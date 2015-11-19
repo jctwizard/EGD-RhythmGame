@@ -75,7 +75,7 @@ RectTransform:
   m_GameObject: {fileID: 193784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +97,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 10
+      value: 4.33330011
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: spriteCorrect
@@ -119,6 +119,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: fe6feb486abc1954a8205e9a186e060b,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 193784}

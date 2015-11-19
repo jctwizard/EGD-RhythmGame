@@ -14,7 +14,7 @@ public class PromptManager : MonoBehaviour {
 	private RectTransform m_rectTransform;			// This object's rect transform component
 	private Listener m_listener;					// This object's listener component
 
-	private const int PROMPTLIMIT = 16;				// The maximum number of prompts that exist at any time
+	private const int PROMPTLIMIT = 128;				// The maximum number of prompts that exist at any time
 	public int m_promptCount = 0;					// The current number of prompts
 	public Prompt currentPrompt;					// The current prompt being asked for
 
@@ -31,7 +31,7 @@ public class PromptManager : MonoBehaviour {
 	void FixedUpdate () {
 
 		// Check for beat and call beat action if true
-		if (m_listener != null) {
+		if (m_listener != null && m_gameDataRef.playing) {
 			if (m_listener.beat) {
 				BeatAction ();
 			}

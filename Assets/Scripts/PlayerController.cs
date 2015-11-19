@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-	public enum State { Attack, Defence, Idle, Run, Slash, Roll };
+	public enum State { Attack, Defence, Idle, Run, Slash, Roll, Death };
 	private Animator animator;
 
 	// Use this for initialization

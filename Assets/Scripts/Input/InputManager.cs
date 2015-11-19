@@ -127,12 +127,13 @@ public class InputManager : MonoBehaviour
 			{
 				enemyScript.ChangeState(EnemyScript.State.Attack);
 				enemyScript.hit = true;
+				enemyScript.hurt = true;
 
-				PlayerStats playerStats = playerRef.GetComponent<PlayerStats>();
-				playerStats.TakeDamage (enemyScript.Damage);
+				//PlayerStats playerStats = playerRef.GetComponent<PlayerStats>();
+				//playerStats.TakeDamage (enemyScript.Damage);
 
 				// Change player animation to attack
-				playerControllerRef.ChangeState(PlayerController.State.Defence);
+				//playerControllerRef.ChangeState(PlayerController.State.Defence);
 			}
 		}
 		
@@ -145,12 +146,13 @@ public class InputManager : MonoBehaviour
 			if (!obstacleScript.hit && obstacle.transform.position.x > playerRef.transform.position.x && obstacle.transform.position.x - playerRef.transform.position.x <= obstacle.GetComponent<ObstacleScript>().Range) 
 			{
 				obstacleScript.hit = true;
+				obstacleScript.hurt = true;
 
-				PlayerStats playerStats = playerRef.GetComponent<PlayerStats>();
-				playerStats.TakeDamage (obstacleScript.Damage);
+				//PlayerStats playerStats = playerRef.GetComponent<PlayerStats>();
+				//playerStats.TakeDamage (obstacleScript.Damage);
 				
 				// Change player animation to attack
-				playerControllerRef.ChangeState(PlayerController.State.Roll);
+				//playerControllerRef.ChangeState(PlayerController.State.Roll);
 			}
 		}
 	}

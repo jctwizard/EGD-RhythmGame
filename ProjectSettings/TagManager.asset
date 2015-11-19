@@ -11,6 +11,10 @@ TagManager:
   - Right
   - Enemy
   - Obstacle
+  - StartText
+  - GameData
+  - GameOver
+  - Win
   layers:
   - Default
   - TransparentFX

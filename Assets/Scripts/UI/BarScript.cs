@@ -13,6 +13,7 @@ public class BarScript : MonoBehaviour {
 	[SerializeField] private BarType type = BarType.Health;
 	[SerializeField] private float currentValue;
 	[SerializeField] private float maxValue;
+	[SerializeField] private float levelLength = 120.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -34,6 +35,18 @@ public class BarScript : MonoBehaviour {
 			break;
 		case BarType.Level:
 			//TO DO: add level % completion
+			GameData gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+			currentValue = gameData.progress;
+
+			if (currentValue >= levelLength)
+			{
+				gameData.win = true;
+			}
+
+			maxValue = levelLength;
+			gameObject.transform.localScale = new Vector3 ((currentValue/maxValue),
+			                                               gameObject.transform.localScale.y,
+			                                               gameObject.transform.localScale.z);
 			break;
 		}
 	}
