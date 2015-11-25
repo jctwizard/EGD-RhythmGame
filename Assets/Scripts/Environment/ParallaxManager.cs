@@ -4,10 +4,11 @@ using System.Collections;
 public class ParallaxManager : MonoBehaviour {
 
 	public ScrollingObject[] parallaxObjects;
-	private float m_startPosX = 19.15f;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		parallaxObjects[1].transform.position = parallaxObjects[0].transform.position + new Vector3(parallaxObjects[0].GetComponent<Renderer>().bounds.extents.x * 2.0f, 0, 0);	
 	}
 	
 	// Update is called once per frame
@@ -15,11 +16,11 @@ public class ParallaxManager : MonoBehaviour {
 	{
 		// check for position of parallax object 0
 		if ((reachedEdge(parallaxObjects[0])) && (parallaxObjects[1].transform.position.x <= 0)) {
-			parallaxObjects [1].transform.position = new Vector3 (m_startPosX, parallaxObjects [1].transform.position.y, 0);
+			parallaxObjects[1].transform.position = parallaxObjects[0].transform.position + new Vector3(parallaxObjects[0].GetComponent<Renderer>().bounds.extents.x * 2.0f - parallaxObjects[0].speed * Time.deltaTime, 0, 0);	
 		}
 		// check for position of parallax object 1
 		if ((reachedEdge(parallaxObjects[1])) && (parallaxObjects[0].transform.position.x <= 0)) {
-			parallaxObjects [0].transform.position = new Vector3 (m_startPosX, parallaxObjects [0].transform.position.y, 0);
+			parallaxObjects[0].transform.position = parallaxObjects[1].transform.position + new Vector3(parallaxObjects[1].GetComponent<Renderer>().bounds.extents.x * 2.0f - parallaxObjects[0].speed * Time.deltaTime, 0, 0);	
 		}
 
 	}
