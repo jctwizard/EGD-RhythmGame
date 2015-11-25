@@ -125,7 +125,6 @@ public class InputManager : MonoBehaviour
 
 			if (!enemyScript.hit && enemy.transform.position.x > playerRef.transform.position.x && enemy.transform.position.x - playerRef.transform.position.x <= enemy.GetComponent<EnemyScript>().Range) 
 			{
-				enemyScript.ChangeState(EnemyScript.State.Attack);
 				enemyScript.hit = true;
 				enemyScript.hurt = true;
 
