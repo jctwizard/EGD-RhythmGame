@@ -52,13 +52,22 @@ public class GameData : MonoBehaviour
 	{
 		if (!playing)
 		{
-			playing = true;
-			GameObject.FindWithTag("StartText").GetComponent<Text>().text = "Restart";
-			Debug.Log ("restarted");
+			if (GameObject.FindWithTag("Player").GetComponent<PlayerStats>().Health <= 0)
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
+			else
+			{
+				playing = true;
+				GameObject.FindWithTag("StartText").GetComponent<Text>().text = "Restart";
+				Debug.Log ("restarted");
+			}
 		}
 		else
 		{
+			//playing = false;
 			Application.LoadLevel(Application.loadedLevel);
+
 		}
 	}
 }
