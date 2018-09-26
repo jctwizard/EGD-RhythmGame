@@ -23,3 +23,6 @@ sysinfo.txt
 player_win_x86_s.pdb
 
 player_win_x86.pdb
+
+# macOS gemerated meta files
+.DS_Store
